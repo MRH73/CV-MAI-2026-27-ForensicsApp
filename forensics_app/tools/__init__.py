@@ -17,7 +17,7 @@ def build_tool_registry() -> ToolRegistry:
             RedChannelTool(),
             GreenChannelTool(),
             BlueChannelTool(),
-            HistogramTool()
+            HistogramTool(),
             BGRChannelSwapTool(),
         ]
     )
