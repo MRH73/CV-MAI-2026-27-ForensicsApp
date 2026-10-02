@@ -2,6 +2,7 @@
 
 from .grayscale import GrayscaleTool
 from .image_info import ImageInfoTool
+from .masking import MaskingTool
 from .registry import ToolRegistry
 from .channel_split import RedChannelTool, GreenChannelTool, BlueChannelTool
 from .histogram_visualization import HistogramTool
@@ -24,6 +25,7 @@ def build_tool_registry() -> ToolRegistry:
             ChannelSwapTool("GBR"),
             ChannelSwapTool("BRG"),
             ChannelSwapTool("BGR"),
+            MaskingTool(),
         ]
     )
 
