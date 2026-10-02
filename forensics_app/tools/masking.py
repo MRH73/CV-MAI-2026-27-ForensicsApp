@@ -101,6 +101,11 @@ class _MaskingDialog(simpledialog.Dialog):
 
 
 class MaskingTool(ForensicsTool):
+    tool_id = "masking"
+    title = "Masking"
+    category = "Image processing"
+    description = ("Create a mask from the working image "
+                   "and apply it to a target image with an optional texture.")
 
     def run(self, parent: tk.Misc, document: ImageDocument) -> ToolResult | None:
 
