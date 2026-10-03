@@ -1,5 +1,7 @@
 """Register course functionality here so it appears in the sidebar."""
+from PIL.ImageEnhance import Contrast
 
+from .contrast_stretching import ContrastStretchingTool
 from .grayscale import GrayscaleTool
 from .image_info import ImageInfoTool
 from .masking import MaskingTool
@@ -18,7 +20,6 @@ def build_tool_registry() -> ToolRegistry:
             RedChannelTool(),
             GreenChannelTool(),
             BlueChannelTool(),
-            HistogramTool(),
             ChannelSwapTool("RGB"),
             ChannelSwapTool("RBG"),
             ChannelSwapTool("GRB"),
@@ -26,6 +27,8 @@ def build_tool_registry() -> ToolRegistry:
             ChannelSwapTool("BRG"),
             ChannelSwapTool("BGR"),
             MaskingTool(),
+            HistogramTool(),
+            ContrastStretchingTool()
         ]
     )
 
